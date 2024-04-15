@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <Transition :duration="550" name="nested">
+        <div class="menu" v-show="Show">
+          <div class="categories">
+            <div id="gestures-icon" @click="FilterCategory('Gestures')" v-bind:style="{ opacity: selectedCategory === 'Gestures' ? '0.6' : '1' }"></div>
+            <div id="dances-icon" @click="FilterCategory('Dances')" v-bind:style="{ opacity: selectedCategory === 'Dances' ? '0.6' : '1' }"></div>
+            <div id="emotes-icon" @click="FilterCategory('Emotes')" v-bind:style="{ opacity: selectedCategory === 'Emotes' ? '0.6' : '1' }"></div>
+            <div id="favorites-icon" @click="FilterCategory('Favorites')" v-bind:style="{ opacity: selectedCategory === 'Favorites' ? '0.6' : '1' }"></div>
+          </div>
+  
+          <div class="start-separator"></div>
+
+          <input type="text" v-model="searchQuery" class="search-input" placeholder=". . .">
+          
+          <div class="animations">
+            <ul>
+              <li class="listbox" v-for="(Animation, index) in FilteredAnimations" :key="index" @click="StartAnim(Animation)" @click.right="Favorite(Animation)">
+                <div>
+                  <div class="list-labels">
+                    <p>{{ Animation.Label }}</p>
+                  </div>
+                </div>
+                <div id="animation-favorites-icon" v-bind:style="{ opacity: Animation.Favorite ? '1' : '0.4' }"></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="end-separator"></div>
+          <div class="stop-anim" @click="StopAnim()"></div>
+        </div>
+      </Transition>
+    </div>
+  </body>
+</html>
+
+<script src="vendor/vue.js"></script>
+<script src="app.js"></script>

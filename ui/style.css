@@ -1,0 +1,255 @@
+@font-face {
+  font-family: rdr;
+  src: url(assets/fonts/Redemption.ttf);
+}
+
+@font-face {
+  font-family: rdrlino;
+  src: url(assets/fonts/RDRLino-Regular.ttf);
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0px;
+}
+
+.nested-enter-active, .nested-leave-active {
+	transition: all 0.3s ease-in-out;
+}
+
+.nested-leave-active {
+  transition-delay: 0.25s;
+}
+
+.nested-enter-from,
+.nested-leave-to {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.nested-enter-active .inner,
+.nested-leave-active .inner { 
+  transition: all 0.3s ease-in-out;
+}
+
+.nested-enter-active .inner {
+	transition-delay: 0.25s;
+}
+
+.nested-enter-from .inner,
+.nested-leave-to .inner {
+  transform: translateX(30px);
+  opacity: 0.001;
+}
+
+body {
+  user-select: none;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+
+  font-family: rdr;
+
+  /* background-color: grey; */
+}
+
+.menu {
+  width: 450px;
+  height: 570px;
+
+  background-image: url(assets/inkroller.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  text-align: center;
+
+  padding-bottom: 20px;
+
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  padding-bottom: 20px;
+}
+
+.categories {
+  width: 82%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5px auto;
+  margin-top: 6%;
+
+  gap: 5%;
+}
+
+.categories div {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.5s ease;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  transition: opacity 0.3s ease;
+}
+
+.categories div:hover {
+  opacity: 0.4;
+}
+
+#gestures-icon {
+  background-image: url(assets/emote_action_listen_1.png);
+}
+
+#dances-icon {
+  background-image: url(assets/emote_dance_carefree_b.png);
+}
+
+#emotes-icon {
+  background-image: url(assets/emote_action_flex.png);
+}
+
+#favorites-icon {
+  background-image: url(assets/star.png);
+}
+
+.search-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #cccccc9a;
+  outline: none;
+  padding: 5px;
+  width: 70%;
+  color: white;
+  font-size: 12px;
+
+  font-family: rdrlino;
+}
+
+.search-input:hover {
+  border-bottom: 1px solid #cccccc;
+}
+
+.start-separator {
+  width: 80%;
+  height: 4%;
+
+  background-image: url(assets/scroller_right_bottom2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  margin: 1px auto;
+}
+
+.animations {
+  width: 80%;
+  height: 60%;
+
+  margin: 10px auto;
+
+  overflow-y: auto;
+
+  padding: 5px;
+}
+
+.animations ul {
+  width: 100%;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.listbox {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 46%;
+
+  background-image: url(assets/selection_box_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  margin-bottom: 10px;
+  padding: 2%;
+
+  transition: opacity 0.3s ease;
+}
+
+.listbox:hover {
+  opacity: 0.4;
+}
+
+.listbox div {
+  display: flex;
+  margin: auto auto;
+}
+
+.list-labels {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-labels p {
+  color: white;
+  font-size: 1rem;
+  font-family: rdrlino;
+  margin: 0px;
+}
+
+#animation-favorites-icon {
+  width: 15px;
+  height: 15px;
+  transition: opacity 0.5s ease;
+
+  background-image: url(assets/star.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.end-separator {
+  width: 80%;
+  height: 4%;
+
+  background-image: url(assets/scroller_right_bottom.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  margin: 1px auto;
+}
+
+.stop-anim {
+  width: 50px;
+  height: 50px;
+
+  background-image: url(assets/emote_action_stop_here.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  margin: 10px auto;
+
+  transition: opacity 0.3s ease;
+}
+
+.stop-anim:hover {
+  opacity: 0.4;
+}
