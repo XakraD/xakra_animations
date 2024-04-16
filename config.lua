@@ -23,15 +23,6 @@ Config.Animations = {
     --     Type = 'Scenario',  -- 'Anim', 'Emote', 'Scenario'
     --     Scenario = 'WORLD_HUMAN_SIT_GROUND',
     -- },
-    -- {
-    --     Label = 'Slap',
-    --     Category = 'Shared',    -- 'Gestures', 'Dances', 'Emotes'
-    --     Type = 'Shared',  -- 'Anim', 'Emote', 'Scenario'
-    --     Dict1 = 'script_story@sal1@ig@sal1_ig3_slap_game',
-    --     Body1 = 'arthur_slaps_01_arthur',
-    --     Dict2 = 'script_story@sal1@ig@sal1_ig3_slap_game',
-    --     Body2 = 'arthur_slaps_01_lenny',
-    -- },
 
 -- ################################## Gestures ##################################
     {
