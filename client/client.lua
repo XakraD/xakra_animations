@@ -41,7 +41,7 @@ end)
 RegisterNUICallback('Anim', function(args, cb)
     if args.Animation.Dict and args.Animation.Body then
         ClearPedTasks(PlayerPedId())
-        Anim(args.Animation.Dict, args.Animation.Body, -1, args.Animation.Flag or 1)
+        Anim(args.Animation.Dict, args.Animation.Body, -1, args.Animation.Flag or 0)
     end
 end)
 

@@ -92,6 +92,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'mini_hostage',
         Body = 'gped_host_knl_idl',
+        Flag = 1,
     },
     {
         Label = 'Point',
@@ -99,6 +100,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'script_common@other@unapproved',
         Body = 'loop_0',
+        Flag = 31,
     },
     {
         Label = 'Cry',
@@ -106,6 +108,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'script_common@other@unapproved',
         Body = 'cry_loop',
+        Flag = 1,
     },
     {
         Label = 'Surrender',
@@ -113,6 +116,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'mech_busted@unapproved',
         Body = 'idle_b',
+        Flag = 1,
     },
     {
         Label = 'Hands up',
@@ -120,12 +124,13 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'mech_loco_f@generic@reaction@handsup@unarmed@normal',
         Body = 'loop',
+        Flag = 31,
     },
     {
         Label = 'Mourn',
         Category = 'Gestures',    -- 'Gestures', 'Dances', 'Emotes'
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
-        Dict = 'script_common@other@unapproved',
+        Dict = 'script_proc@robberies@shop@rhodes@gunsmith@inside_basement_reshoot',
         Body = 'cry_loop_captor',
     },
     {
@@ -141,6 +146,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'script_proc@robberies@unapproved',
         Body = 'stand_prisoner_cell_idle_a',
+        Flag = 1,
     },
     {
         Label = 'Cover',
@@ -176,6 +182,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'script_common@crowd_control@unapproved@a@ped_d@cower',
         Body = 'cower',
+        Flag = 1,
     },
     {
         Label = 'Operation',
@@ -189,7 +196,7 @@ Config.Animations = {
         Category = 'Gestures',    -- 'Gestures', 'Dances', 'Emotes'
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'amb_misc@world_human_door_knock@male_a@idle_c',
-        Body = 'base',
+        Body = 'idle_h',
     },
     {
         Label = 'Sweat',
@@ -204,6 +211,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'script_re@lost_man',
         Body = 'idle',
+        Flag = 31,
     },
     {
         Label = 'Piss',
@@ -287,6 +295,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'mech_loco_m@generic@special@unarmed@itchy@idle',
         Body = 'idle_intro',
+        Flag = 31,
     },
     {
         Label = 'Throw up',
@@ -308,6 +317,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'mech_loco_m@generic@injured@unarmed@critical_ground@idle@_variations@d',
         Body = 'idle',
+        Flag = 1,
     },
     {
         Label = 'Damage 2',
@@ -315,6 +325,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'mech_loco_m@generic@injured@unarmed@critical_ground@idle@_variations@e',
         Body = 'idle',
+        Flag = 1,
     },
     {
         Label = 'Dying',
@@ -322,6 +333,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'amb_misc@world_human_indian_sick_dying@male@male_a@idle_a',
         Body = 'idle_c',
+        Flag = 1,
     },
     {
         Label = 'Nervous',
@@ -329,6 +341,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'script_rc@rmyr4@unapproved@scared',
         Body = 'idle',
+        Flag = 31,
     },
     {
         Label = 'Guard',
@@ -336,6 +349,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'script_common@other@unapproved',
         Body = 'stand_guard@idle_a',
+        Flag = 1,
     },
     {
         Label = 'Hyped',
@@ -350,6 +364,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'amb_work@world_human_whore@female_a@wip_base',
         Body = 'wip_base',
+        Flag = 31,
     },
     {
         Label = 'Feminine',
@@ -392,6 +407,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'mech_skin@buck@butcher',
         Body = 'trans_to_stoic_butcher',
+        Flag = 31,
     },
     {
         Label = 'Hands side',
@@ -399,6 +415,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'script_amb@stores@store_waist_stern_guy',
         Body = 'base',
+        Flag = 31,
     },
     {
         Label = 'Hands belt',
@@ -406,12 +423,14 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'mech_loco@generic@spectator@b@streamed_idles',
         Body = 'idle_c',
+        Flag = 31,
     },
     {
         Label = 'Badass',
         Category = 'Gestures',    -- 'Gestures', 'Dances', 'Emotes'
         Type = 'Scenario',  -- 'Anim', 'Emote', 'Scenario'
         Scenario = 'WORLD_HUMAN_BADASS',
+        Flag = 31,
     },
     {
         Label = 'Careless',
@@ -419,6 +438,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'amb_misc@world_human_waiting_impatient@male_d@idle_b',
         Body = 'idle_d',
+        Flag = 31,
     },
     {
         Label = 'Moderate drunk',
@@ -426,6 +446,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'mech_loco_m@generic@drunk@unarmed@idle_moderate_drunk',
         Body = 'idle',
+        Flag = 31,
     },
     {
         Label = 'Clear',
@@ -440,6 +461,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'ai_react@react_look_layers@base_emotions@angry',
         Body = 'direct',
+        Flag = 31,
     },
     {
         Label = 'Sad',
@@ -447,13 +469,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'mech_loco_m@generic@emotion@unarmed@sad@idle',
         Body = 'idle',
-    },
-    {
-        Label = 'Sad',
-        Category = 'Gestures',    -- 'Gestures', 'Dances', 'Emotes'
-        Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
-        Dict = 'mech_loco_m@generic@emotion@unarmed@sad@idle',
-        Body = 'idle',
+        Flag = 31,
     },
     {
         Label = 'Tak',
@@ -501,6 +517,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'amb_camp@world_camp_fire_sit_ground@male_c@idle_a',
         Body = 'idle_a',
+        Flag = 1,
     },
     {
         Label = 'Sleep',
@@ -508,6 +525,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'amb_rest@world_human_sleep_ground@arm@male_b@idle_b',
         Body = 'idle_f',
+        Flag = 1,
     },
     {
         Label = 'Lean rail',
@@ -515,6 +533,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'amb_rest_lean@world_human_lean_fence_fwd_check_out_livestock@male_e@idle_c',
         Body = 'idle_g',
+        Flag = 1,
     },
     {
         Label = 'Write ledger',
@@ -522,6 +541,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'amb_work@world_human_write_notebook@female_a@idle_c',
         Body = 'idle_g',
+        Flag = 1,
     },
     {
         Label = 'Idle',
@@ -529,6 +549,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'amb_misc@world_human_stand_waiting@female_a@idle_a',
         Body = 'idle_a',
+        Flag = 31,
     },
     {
         Label = 'Idle 2',
@@ -536,6 +557,7 @@ Config.Animations = {
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
         Dict = 'amb_misc@world_human_stand_waiting@female_a@idle_a',
         Body = 'idle_b',
+        Flag = 31,
     },
     {
         Label = 'Cought',
