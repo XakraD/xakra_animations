@@ -1,23 +1,18 @@
 RegisterCommand(Config.CommandOpen, function(source, args, rawCommand)
-    TriggerServerEvent('xakra_animations:Open')
-end)
+    local FavoriteAnimations = json.decode(GetResourceKvpString('FavoriteAnimations') or '[]')
 
-RegisterNetEvent('xakra_animations:Open')
-AddEventHandler('xakra_animations:Open', function(favorites)
-    local Animations = Config.Animations
-
-    for i, v in pairs(Animations) do
-        Animations[i].Favorite = false
-        for _, x in pairs(favorites) do
+    for i, v in pairs(Config.Animations) do
+        v.Favorite = false
+        for _, x in pairs(FavoriteAnimations) do
             if x == v.Label then
-                Animations[i].Favorite = true
+                v.Favorite = true
             end
         end
     end
 
     SendNUIMessage({
         type = 'Open',
-        Animations = Animations,
+        Animations = Config.Animations,
     })
 
     SetNuiFocus(true, true)
@@ -34,7 +29,23 @@ RegisterNUICallback('Close', function(args, cb)
 end)
 
 RegisterNUICallback('Favorite', function(args, cb)
-    TriggerServerEvent('xakra_animations:Favorite', args.Animation, args.Favorite)
+    local FavoriteAnimations = json.decode(GetResourceKvpString('FavoriteAnimations') or '[]')
+
+    local InTable = false
+
+    for i, v in pairs(FavoriteAnimations) do
+        if not args.Favorite and v == args.Animation.Label then
+            InTable = true
+            table.remove(FavoriteAnimations, i)
+            break
+        end
+    end
+
+    if args.Favorite and not InTable then
+        table.insert(FavoriteAnimations, args.Animation.Label)
+    end
+
+    SetResourceKvp('FavoriteAnimations', json.encode(FavoriteAnimations))
 end)
 
 --########################## ANIMATION ##########################
@@ -46,18 +57,20 @@ RegisterNUICallback('Anim', function(args, cb)
 end)
 
 function Anim(animDict, animName, duration, flags, introtiming, exittiming)
-    RequestAnimDict(animDict)
-
     local dur = duration or -1
     local flag = flags or 1
     local intro = tonumber(introtiming) or 1.0
     local exit = tonumber(exittiming) or 1.0
 
-    local t = 5
+    local t = 500
 
-    while not HasAnimDictLoaded(animDict) and t > 0 do
-        t = t - 1
-        Wait(300)
+    if not HasAnimDictLoaded(animDict) then
+        RequestAnimDict(animDict)
+
+        while not HasAnimDictLoaded(animDict) and t > 0 do
+            t = t - 1
+            Wait(0)
+        end
     end
 
     TaskPlayAnim(PlayerPedId(), animDict, animName, intro, exit, dur, flag, 1, false, false, false, 0, true)
