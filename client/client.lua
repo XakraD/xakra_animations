@@ -57,15 +57,10 @@ RegisterNUICallback('Anim', function(args, cb)
 end)
 
 function Anim(animDict, animName, duration, flags, introtiming, exittiming)
-    local dur = duration or -1
-    local flag = flags or 1
-    local intro = tonumber(introtiming) or 1.0
-    local exit = tonumber(exittiming) or 1.0
-
-    local t = 500
-
     if not HasAnimDictLoaded(animDict) then
         RequestAnimDict(animDict)
+
+        local t = 500
 
         while not HasAnimDictLoaded(animDict) and t > 0 do
             t = t - 1
@@ -73,8 +68,8 @@ function Anim(animDict, animName, duration, flags, introtiming, exittiming)
         end
     end
 
-    TaskPlayAnim(PlayerPedId(), animDict, animName, intro, exit, dur, flag, 1, false, false, false, 0, true)
-    RemoveAnimDict(dict)
+    TaskPlayAnim(PlayerPedId(), animDict, animName, tonumber(introtiming) or 1.0, tonumber(exittiming) or 1.0, duration or -1, flag or 1, 1, false, false, false, 0, true)
+    RemoveAnimDict(animDict)
 end
 
 RegisterNUICallback('Emote', function(args, cb)
