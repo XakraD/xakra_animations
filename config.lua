@@ -220,6 +220,12 @@ Config.Animations = {
         Scenario = 'WORLD_HUMAN_PEE',
     },
     {
+        Label = 'Ground reading book',
+        Category = 'Gestures',    -- 'Gestures', 'Dances', 'Emotes'
+        Type = 'Scenario',  -- 'Anim', 'Emote', 'Scenario'
+        Scenario = 'WORLD_HUMAN_SIT_GROUND_READING_BOOK',
+    },
+    {
         Label = 'Injured arm',
         Category = 'Gestures',    -- 'Gestures', 'Dances', 'Emotes'
         Type = 'Anim',  -- 'Anim', 'Emote', 'Scenario'
