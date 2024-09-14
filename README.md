@@ -1,6 +1,4 @@
 # xakra_animations
-## Requirements
-- [oxmysql](https://github.com/overextended/oxmysql)
 
 ## Description
 Animation menu script, opened with a command, featuring a search bar and categorized animations (Gestures, Dances, Emotes, Favorites). Left-click to start an animation, right-click to add or remove it from favorites. Icon at the bottom of the menu to stop the animation. To close the menu press the Esc key.
