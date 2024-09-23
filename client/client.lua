@@ -56,7 +56,7 @@ RegisterNUICallback('Anim', function(args, cb)
     end
 end)
 
-function Anim(animDict, animName, duration, flags, introtiming, exittiming)
+function Anim(animDict, animName, duration, flag, introtiming, exittiming)
     if not HasAnimDictLoaded(animDict) then
         RequestAnimDict(animDict)
 
