@@ -1,4 +1,4 @@
-author 'Xakra <Discord:Xakra#8145:https://discord.gg/kmsqB6xQjH>'
+author 'Xakra'
 version '1.0'
 description 'xakra_animations'
 
